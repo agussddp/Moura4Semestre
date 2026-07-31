@@ -37,7 +37,7 @@ function App() {
           {
             tasklist.map((t) => {
               return (
-                <article className="cardtask">
+                 <article className="cardtask" key={t.id}>
                   <p className="card">
                     {t.description}
                   </p>
