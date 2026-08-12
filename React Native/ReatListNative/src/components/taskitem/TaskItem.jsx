@@ -4,23 +4,36 @@ import { TaskItemStyle } from "./TaskItemStyle";
 export const TaskItem = () => {
     return (
         <View style={TaskItemStyle.cardbox}>
+         
             <Text style={TaskItemStyle.cardText}>berratriz</Text>
 
-            <View style={TaskItemStyle.buttonGroup}>
-                <TouchableOpacity style={TaskItemStyle.cardButton}>
+
+                {/* Botão do Lápis */}
+                <TouchableOpacity style={
+                    [
+                        TaskItemStyle.cardButton, 
+                        TaskItemStyle.cardButtonEditColor
+                    ]}>
                     <Image 
                         source={require("../../../assets/Lapis.png")}
                         style={TaskItemStyle.icon}
                     />
                 </TouchableOpacity>
 
-                <TouchableOpacity style={TaskItemStyle.cardButton}>
+
+                {/* Botão da Lixeira */}
+                <TouchableOpacity style={
+                    [
+                        TaskItemStyle.cardButton,  
+                        TaskItemStyle.cardButtonTrashColor
+                    ]}>
                     <Image 
                         source={require("../../../assets/Lixeira.png")}
                         style={TaskItemStyle.icon}
                     />
                 </TouchableOpacity>
-            </View>
+                
+           
         </View>
     );
 };
