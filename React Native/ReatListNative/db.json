@@ -1,7 +1,21 @@
 {
-    "taskpoint": [
-        {"id": 1, "descricao": "esutdar HTML"},
-        {"id": 2, "descricao": "esutdar JavaScript"},
-        {"id": 3, "descricao": "ablue ablue"}
-    ]
+  "taskpoint": [
+    {
+      "id": "1",
+      "descricao": "esutdar HTML"
+    },
+    {
+      "id": "2",
+      "descricao": "esutdar JavaScript"
+    },
+    {
+      "id": "3",
+      "descricao": "ablue ablue"
+    },
+    {
+      "descricao": "",
+      "id": "q74eLcfg3D8"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

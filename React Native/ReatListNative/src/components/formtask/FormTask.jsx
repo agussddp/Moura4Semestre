@@ -1,25 +1,32 @@
-import { View, Text, TextInput, TouchableOpacity, Alert } from "react-native"
+import { View, Text, TextInput, TouchableOpacity, Alert, Platform } from "react-native"
 import { FormTaskStyle } from "./FormTaskStyle"
-import { useState } from "react"
-
+import { useContext, useState } from "react"
+import { TaskContext } from "../../context/TaskContext"
 
 export const FormTask = () => {
     const [taskValue, setTaskValue] = useState("")
+  
+    const { postTasks } = useContext(TaskContext) 
 
     const saveTask = () => {
-        console.log(taskValue)
-        // Titulo da janela
-        // texto da mensagem
-        // array com os botoes da janela (podendo ser mais de 1)
-        Alert.alert("Titulo da janela", `Tarefa: ${taskValue} cadastrado com sucesso`, [
-            //BOTAO 1
-            {
-                text: "Ok",
-                onPress: ()=> {}
-            }
-        ])
-    }
+        if (!taskValue.trim()) return; 
 
+        console.log(taskValue)
+        postTasks(taskValue) 
+        
+        const mensagem = `Tarefa: ${taskValue} cadastrada com sucesso`;
+
+        if (Platform.OS === 'web') {
+            alert(mensagem);
+        } else {
+            Alert.alert("Sucesso", mensagem, [
+                {
+                    text: "Ok",
+                    onPress: () => {}
+                }
+            ]);
+        }
+    }
     return (
         <View style={FormTaskStyle.formTaskBox}>
             <TextInput style={FormTaskStyle.taskInputName}
@@ -32,13 +39,10 @@ export const FormTask = () => {
 
             <TouchableOpacity 
                 style={FormTaskStyle.taskbutton}
-                onPress={()=>
-                    saveTask()
-                }
+                onPress={() => saveTask()}
             >
                 <Text style={FormTaskStyle.taskButtonText}> Adicionar</Text>
             </TouchableOpacity>
         </View>
     )
 }
-
