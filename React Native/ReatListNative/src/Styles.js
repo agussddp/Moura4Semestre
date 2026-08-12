@@ -13,9 +13,9 @@ export const styles = StyleSheet.create({
     backgroundColor: '#1D2135',
     // alignItems: 'center',
     // justifyContent: 'center',
-    borderWidth: 3,
-    borderStyle: "solid",
-    borderColor: "blue"
+    // borderWidth: 3,
+    // borderStyle: "solid",
+    // borderColor: "blue"
 
   },
 });

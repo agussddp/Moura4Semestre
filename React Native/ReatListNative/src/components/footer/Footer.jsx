@@ -1,10 +1,12 @@
-import { View, Text} from "react-native"
-import { FooterStyle } from "./FooterStyle"
+import { View, Text } from 'react-native';
+import { FooterStyle } from './FooterStyle'; 
 
 export const Footer = () => {
-    return (
-        <View>
-            <Text>Footer Componet</Text>
-        </View>
-    )
-}
+  return (
+    <View style={FooterStyle.footerbox}>
+      <Text style={FooterStyle.footertext}>
+        2026, React List - Todos os direitos reservados
+      </Text>
+    </View>
+  );
+};
