@@ -1,0 +1,21 @@
+{
+  "taskpoint": [
+    {
+      "descricao": "Invadi a sua máquina 🤣",
+      "id": "R3W5vGBVRaM"
+    },
+    {
+      "descricao": "Estou saindo da sua conexão ",
+      "id": "0vGnJIkUN-Q"
+    },
+    {
+      "descricao": "Aprende React Native Giulia!!",
+      "id": "doEYOZNN5jI"
+    },
+    {
+      "descricao": "Bater na beatriz bem forte",
+      "id": "Q_nkJwTcPew"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
